@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/data_tables_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
       routes: {
         '/second': (context) => const SecondPage(),
+        '/data': (context) => const DataTablesPage(),
       },
     );
   }
@@ -59,7 +61,14 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.pushNamed(context, '/second');
               },
-              child: const Text('Next'),
+              child: const Text('Go to Second Page'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/data');
+              },
+              child: const Text('View Data Tables'),
             ),
           ],
         ),
@@ -68,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
