@@ -17,7 +17,6 @@ class _DataTablesPageState extends State<DataTablesPage> with SingleTickerProvid
   bool _isLoading = true;
   late TabController _tabController;
 
-  // Pagination settings
   int _rowsPerPage = 10;
   final List<int> _availableRowsPerPage = [5, 10, 20, 50];
 
